@@ -14,5 +14,5 @@ script=script.replace(/fetch\(['"]\/api\/content['"]/,`fetch(${JSON.stringify(ba
 writeFileSync(`${destination}/script.js`,script);
 writeFileSync(`${destination}/.nojekyll`,'');
 mkdirSync(`${destination}/admin`,{recursive:true});
-writeFileSync(`${destination}/admin/index.html`,`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lavender Admin</title><meta http-equiv="refresh" content="0;url=${backend}/admin"><p><a href="${backend}/admin">Open the secure Lavender dashboard</a></p></html>`);
+writeFileSync(`${destination}/admin/index.html`,`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lavender Admin</title><link rel="icon" type="image/jpeg" href="../assets/llc-logo.jpeg?v=llc-logo-1"><meta http-equiv="refresh" content="0;url=${backend}/admin"><p><a href="${backend}/admin">Open the secure Lavender dashboard</a></p></html>`);
 console.log('GitHub Pages frontend prepared. The authenticated dashboard and database remain on the backend.');

@@ -1,0 +1,452 @@
+:root {
+    --purple: #655184;
+    --ink: #302b3b;
+    --muted: #77717e;
+    --line: #e8e2ec;
+    --paper: #faf8fc
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font: 14px/1.6 system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper)
+}
+
+a {
+    color: var(--purple);
+    text-decoration: none
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit
+}
+
+button {
+    cursor: pointer
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: wait
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #b493d1;
+    outline-offset: 3px
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 19px 5%
+}
+
+.identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font: 26px Georgia;
+    color: var(--ink)
+}
+
+.identity img {
+    border-radius: 5px
+}
+
+.identity small {
+    font: 8px/2 system-ui;
+    letter-spacing: 2px;
+    display: block
+}
+
+header>div {
+    display: flex;
+    gap: 28px;
+    font-size: 12px
+}
+
+main {
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px 5% 70px
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px
+}
+
+.eyebrow {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--purple);
+    margin-bottom: 10px
+}
+
+h1 {
+    font: 38px/1.2 Georgia;
+    margin: 8px 0 12px
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0
+}
+
+.heading p {
+    color: var(--muted)
+}
+
+.primary,
+.quiet,
+.danger {
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--line)
+}
+
+.primary {
+    color: #fff;
+    background: var(--purple);
+    border-color: var(--purple)
+}
+
+.quiet {
+    background: #fff;
+    color: var(--purple)
+}
+
+.danger {
+    background: #fff;
+    color: #a02d42;
+    border-color: #e6bcc6
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 32px
+}
+
+.stats>div {
+    background: #efe9f5;
+    padding: 20px 25px;
+    border-radius: 9px;
+    color: var(--muted);
+    font-size: 12px
+}
+
+.stats span {
+    display: block;
+    color: var(--ink);
+    font: 34px Georgia;
+    margin-bottom: 7px
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 28px;
+    align-items: start
+}
+
+.library,
+.editor {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 25px;
+    min-width: 0
+}
+
+.panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+    margin-bottom: 22px
+}
+
+.pill {
+    font-size: 9px;
+    letter-spacing: 1px;
+    background: #f0eaf6;
+    color: var(--purple);
+    padding: 5px 9px;
+    border-radius: 20px
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 22px
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 18px
+}
+
+label span,
+small {
+    color: var(--muted);
+    font-weight: 400;
+    font-size: 10px
+}
+
+label span {
+    margin-left: 5px
+}
+
+input:not([type=hidden]),
+textarea,
+select {
+    display: block;
+    width: 100%;
+    border: 1px solid #dcd5e3;
+    background: #fdfcfe;
+    border-radius: 5px;
+    padding: 11px;
+    color: var(--ink);
+    margin-top: 7px;
+    font-size: 13px
+}
+
+textarea {
+    resize: vertical
+}
+
+small {
+    display: block;
+    margin-top: 7px
+}
+
+.tools label {
+    margin: 0;
+    font-size: 10px
+}
+
+.tools select,
+.tools input {
+    font-size: 11px;
+    padding: 9px
+}
+
+.two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px
+}
+
+.notice {
+    font-size: 11px;
+    color: var(--muted);
+    background: #f7f3fa;
+    padding: 12px 14px;
+    border-radius: 5px
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px
+}
+
+#save-status {
+    font-size: 12px;
+    margin: 15px 0 0;
+    white-space: pre-wrap
+}
+
+#save-status.error,
+#list-state.error {
+    color: #a02d42
+}
+
+#list-state {
+    color: var(--muted);
+    font-size: 13px;
+    padding: 12px 0
+}
+
+.entry-row {
+    padding: 17px 0;
+    border-bottom: 1px solid var(--line)
+}
+
+.entry-row h3 {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 8px 0;
+    overflow-wrap: anywhere
+}
+
+.entry-row .meta {
+    font-size: 10px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px
+}
+
+.entry-row p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 7px 0 13px;
+    overflow-wrap: anywhere
+}
+
+.entry-row button {
+    font-size: 11px;
+    padding: 6px 13px
+}
+
+.export {
+    margin-top: 24px;
+    font-size: 11px
+}
+
+.prewrap {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere
+}
+
+dialog {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    width: min(680px, 92vw);
+    padding: 30px;
+    color: var(--ink);
+    max-height: 85vh
+}
+
+dialog::backdrop {
+    background: #302b3b88
+}
+
+dialog>button {
+    float: right
+}
+
+dialog h2 {
+    font: 30px Georgia;
+    clear: both;
+    margin: 20px 0
+}
+
+dialog p {
+    overflow-wrap: anywhere
+}
+
+[hidden] {
+    display: none !important
+}
+
+@media(max-width:900px) {
+    .workspace {
+        grid-template-columns: 1fr
+    }
+
+    .tools {
+        grid-template-columns: 1.5fr 1fr 1fr
+    }
+
+    .heading {
+        align-items: start
+    }
+
+    h1 {
+        font-size: 32px
+    }
+}
+
+@media(max-width:500px) {
+    header {
+        padding: 15px 20px
+    }
+
+    header>div {
+        gap: 12px;
+        font-size: 10px
+    }
+
+    .identity {
+        font-size: 21px
+    }
+
+    .identity img {
+        width: 42px;
+        height: 42px
+    }
+
+    main {
+        padding: 28px 18px
+    }
+
+    .heading {
+        display: block
+    }
+
+    .heading>.primary {
+        margin-top: 10px
+    }
+
+    .stats {
+        gap: 9px
+    }
+
+    .stats>div {
+        padding: 14px;
+        font-size: 10px
+    }
+
+    .stats span {
+        font-size: 27px
+    }
+
+    .editor,
+    .library {
+        padding: 20px
+    }
+
+    .tools {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .tools>label:first-child {
+        grid-column: 1/-1
+    }
+
+    .two {
+        grid-template-columns: 1fr;
+        gap: 0
+    }
+}

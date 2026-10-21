@@ -1,0 +1,2 @@
+# Local preview only. Production ADMIN_EMAIL is configured securely in Sites.
+ADMIN_EMAIL="seedy@sites.test"
